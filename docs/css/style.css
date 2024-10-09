@@ -1,9 +1,11 @@
+@import 'dark.css';
+
 /*******************************/
 /********* General CSS *********/
 /*******************************/
 body {
     color: #797979;
-    background: #ffffff;
+    background: var(--github-base0);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -24,7 +26,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: #EF233C;
+    color: var(--github-blue);
     outline: none;
     text-decoration: none;
 }
