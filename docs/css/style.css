@@ -845,6 +845,92 @@ a:focus {
 /*******************************/
 /******** Portfolio CSS ********/
 /*******************************/
+
+/*--------- Featured ----------*/
+.content-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    display: flex; 
+    transition: transform 0.4s ease-in-out; 
+    width: 100%;
+}
+
+.content-items {
+    display: flex; 
+    width: 100%;
+}
+
+.content-item {
+    display: flex; 
+    min-width: 100%; /* Each item takes the full width of the slider */
+    box-sizing: border-box;
+    margin-bottom: 60px; /* Add vertical space between items */
+}
+
+.content-text {
+    width: 35%; /* Occupy 25% of the content item */
+    padding: 20px;
+    background: transparent; /* Semi-transparent background for readability */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+}
+
+.content-text h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    /*color: var(--purple3);*/
+}
+
+.content-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.content-video {
+    width: 65%; /* Occupy 75% of the content item */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000; /* Black background for the video area */
+}
+
+.content-video video {
+    width: 100%; /* Make video responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure video covers its area */
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the arrows */
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1; /* Ensure arrows are above the content */
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+
+
+/*---------My Latest Work------*/
 .portfolio {
     position: relative;
     padding: 45px 0 15px 0;

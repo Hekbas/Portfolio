@@ -92,7 +92,32 @@
     });
     
     
-    
+    //Portfolio featured
+    let currentSlide = 0;
+
+    function moveSlide(direction) {
+        const contentWrapper = document.querySelector('.content-wrapper');
+        const contentItems = document.querySelectorAll('.content-item');
+        const totalSlides = contentItems.length;
+
+        // Update the current slide index
+        currentSlide += direction;
+
+        // Loop around if the user goes past the first or last item
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1;
+        } else if (currentSlide >= totalSlides) {
+            currentSlide = 0;
+        }
+
+        // Calculate the translation value for the new slide
+        const translateX = -currentSlide * 100;
+
+        // Move the wrapper to the new slide
+        contentWrapper.style.transform = `translateX(${translateX}%)`;
+    }
+
+
     // Portfolio filter
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
