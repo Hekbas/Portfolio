@@ -350,15 +350,16 @@ a:focus {
 .hero .hero-btn .btn {
     margin-top: 35px;
     color: var(--purple3);
-    background: var(--purple3);
-    box-shadow: inset 0 0 0 50px #ffffff;
+    background: transparent;
+    box-shadow: inset 0 0 0 50px #00000000;
+    border-color: var(--purple3);
 }
 
 .hero .hero-btn .btn:hover {
     color: var(--purple3);
     background: transparent;
-    box-shadow: inset 0 0 0 0 #ffffff;
-    border-color: var(--purple3);
+    box-shadow: inset 0 0 0 0 var(--purple3);
+    border-color: var(--purple3-focus);
 }
 
 .hero .hero-btn .btn:first-child {
@@ -460,7 +461,8 @@ a:focus {
     margin-bottom: 10px;
     padding-left: 15px;
     position: relative;
-    font-size: 16px;
+    color: var(--github-base4_2);
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -468,13 +470,14 @@ a:focus {
 }
 
 .section-header p::before {
-    position: absolute;
     content: "";
+    position: absolute;
     height: 3px;
-    top: 11px;
-    right: 0;
+    width: 25px;
+    top: 50%;
     left: -30px;
-    background: #EF233C;
+    background: var(--purple3);
+    transform: translateY(-50%);
     z-index: -1;
 }
 
@@ -485,15 +488,15 @@ a:focus {
     height: 3px;
     top: 11px;
     left: 3px;
-    background: #EF233C;
+    background: var(--purple3);
     z-index: 1;
 }
 
 .section-header h2 {
     margin: 0;
     position: relative;
-    font-size: 45px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 750;
 }
 
 @media (max-width: 767.98px) {
@@ -537,7 +540,7 @@ a:focus {
 }
 
 .about .about-text p {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .about .skills {
@@ -778,7 +781,7 @@ a:focus {
 }
 
 .service .service-item:hover {
-    box-shadow: inset 800px 0 0 0 #EF233C;
+    box-shadow: inset 800px 0 0 0 var(--purple3-40);
 }
 
 .service .service-icon {
@@ -788,14 +791,14 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #EF233C;
-    background: #ffffff;
+    border: 1px solid var(--purple3);
+    background: #ffffff00;
 }
 
 .service .service-icon i {
     position: relative;
     font-size: 60px;
-    color: #EF233C;
+    color: var(--purple3);
     transition: .3s;
 }
 
