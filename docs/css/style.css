@@ -1,12 +1,39 @@
 @import 'dark.css';
 
+/*fonts*/
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/custom.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ClashGrotesk';
+    src: url('../fonts/ClashGrotesk-Variable.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*******************************/
 /********* General CSS *********/
 /*******************************/
 body {
     color: #797979;
     background: var(--github-base0);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'ClashGrotesk', sans-serif;
+}
+
+body::before {
+    content: '';
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/bg.png');
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: -1; /* Make sure it's behind other content */
 }
 
 h1,
@@ -45,7 +72,7 @@ a:focus {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #ffffff;
+    color: var(--purple3);
     background: #EF233C;
     border: 2px solid transparent;
     border-radius: 0;
@@ -124,7 +151,7 @@ a:focus {
 }
 
 .back-to-top i {
-    color: #ffffff;
+    color: #ffffff00;
 }
 
 .back-to-top:hover i {
@@ -167,7 +194,7 @@ a:focus {
     margin-top: 0;
     border: 0;
     border-radius: 0;
-    background: #f8f9fa;
+    background: #00000060;
 }
 
 @media (min-width: 992px) {
@@ -176,13 +203,15 @@ a:focus {
         width: 100%;
         padding: 30px 60px;
         background: transparent !important;
-        border-bottom: 1px dashed rgba(256, 256, 256, .2);
         z-index: 9;
     }
     
     .navbar.nav-sticky {
-        padding: 10px 60px;
-        background: #ffffff !important;
+        padding: 15px 60px;
+        background: #00000060 !important;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        transition: background 0.3s ease;
     }
     
     .navbar .navbar-brand {
@@ -190,41 +219,41 @@ a:focus {
     }
     
     .navbar.nav-sticky .navbar-brand {
-        color: #EF233C;
+        color: var(--purple3);
     }
 
     .navbar-light .navbar-nav .nav-link,
     .navbar-light .navbar-nav .nav-link:focus {
         padding: 10px 10px 8px 10px;
-        color: #ffffff;
+        color: #94a3b8;
         font-size: 15px;
         font-weight: 500;
     }
     
     .navbar-light.nav-sticky .navbar-nav .nav-link,
     .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
-        color: #414141;
+        color: #94a3b8;
     }
 
     .navbar-light .navbar-nav .nav-link:hover,
     .navbar-light .navbar-nav .nav-link.active {
-        color: #111111;
+        color: var(--purple3);
     }
     
     .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
     .navbar-light.nav-sticky .navbar-nav .nav-link.active {
-        color: #EF233C;
+        color: var(--purple3);
     }
 }
 
 @media (max-width: 991.98px) {   
     .navbar {
         padding: 15px;
-        background: #ffffff !important;
+        background: #00000000 !important;
     }
     
     .navbar .navbar-brand {
-        color: #EF233C;
+        color: var(--purple3);
     }
     
     .navbar .navbar-nav {
@@ -250,7 +279,7 @@ a:focus {
     margin-bottom: 45px;
     padding: 120px 0 0 0;
     overflow: hidden;
-    background: linear-gradient(rgba(239, 35, 60, .95), rgba(239, 35, 60, .95)), url(../img/hero-bg.jpg);
+    background: linear-gradient(var(--navbar-purp), var(--github-base0)), url(../img/hero-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -260,15 +289,20 @@ a:focus {
     padding: 0;
 }
 
-.hero .hero-image {
-    position: relative;
-    text-align: right;
-    padding-right: 75px;
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
-.hero .hero-image img {
-    max-width: 80%;
-    max-height: 80%;
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px var(--purple3);
 }
 
 .hero .hero-content {
@@ -281,14 +315,14 @@ a:focus {
 }
 
 .hero .hero-text p {
-    color: #ffffff;
+    color: var(--github-base4_2);
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
 .hero .hero-text h1 {
-    color: #ffffff;
+    color: var(--github-base4_2);
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -299,7 +333,7 @@ a:focus {
     display: inline-block;
     margin: 0;
     height: 35px;
-    color: #ffffff;
+    color: var(--github-base4_2);
     font-size: 35px;
     font-weight: 600;
 }
@@ -316,16 +350,16 @@ a:focus {
 
 .hero .hero-btn .btn {
     margin-top: 35px;
-    color: #EF233C;
-    background: #ffffff;
+    color: var(--purple3);
+    background: var(--purple3);
     box-shadow: inset 0 0 0 50px #ffffff;
 }
 
 .hero .hero-btn .btn:hover {
-    color: #ffffff;
+    color: var(--purple3);
     background: transparent;
     box-shadow: inset 0 0 0 0 #ffffff;
-    border-color: #ffffff;
+    border-color: var(--purple3);
 }
 
 .hero .hero-btn .btn:first-child {
@@ -431,7 +465,7 @@ a:focus {
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    background: #ffffff;
+    background: #ffffff00;
 }
 
 .section-header p::before {
@@ -1467,7 +1501,8 @@ a:focus {
 .footer {
     position: relative;
     margin-top: 45px;
-    background: #EF233C;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .footer .container-fluid {
