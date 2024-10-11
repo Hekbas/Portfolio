@@ -869,19 +869,18 @@ a:focus {
 
 .content-item {
     display: flex; 
-    min-width: 100%; /* Each item takes the full width of the slider */
+    min-width: 100%;
     box-sizing: border-box;
-    margin-bottom: 60px; /* Add vertical space between items */
 }
 
 .content-text {
-    width: 35%; /* Occupy 25% of the content item */
+    width: 35%;
     padding: 20px;
-    background: transparent; /* Semi-transparent background for readability */
+    background: transparent;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the text vertically */
+    justify-content: center;
 }
 
 .content-text h2 {
@@ -905,22 +904,19 @@ a:focus {
 }
 
 .content-video video {
-    width: 100%; /* Make video responsive */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure video covers its area */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background for the arrows */
+    background: transparent;
     border: none;
-    color: white;
-    font-size: 24px;
+    color: var(--github-base3);
+    font-size: 20px;
     padding: 10px;
     cursor: pointer;
-    z-index: 1; /* Ensure arrows are above the content */
+    z-index: 1;
 }
 
 .left-arrow {
@@ -929,6 +925,35 @@ a:focus {
 
 .right-arrow {
     right: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 2px;
+    margin-bottom: 80px;
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background: var(--github-base3);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    width: 22px;
+    height: 4px;
+    background: var(--purple3);
 }
 
 

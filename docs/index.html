@@ -269,20 +269,19 @@
                     <h2>Featured</h2>
                 </div>
                 <div class="content-slider">
-                    <button class="slider-arrow left-arrow" onclick="moveSlide(-1)">&#10094;</button>
                     <div class="content-wrapper">
                         <div class="content-items">
                             <div class="content-item">
                                 <div class="content-text">
                                     <h2>Alien: Nemesis</h2>
-                                    <p>Worked alongside a team of 22 students to develop a game in 3 months for our final project at CITM - UPC, using our propietary Engine - TheOne.</p>
+                                    <p>Worked alongside a team of 22 students to develop a game in 3 months for our final project at CITM - UPC, using our proprietary Engine - TheOne.</p>
                                     <ul>
                                         <li>Designed Engine Architecture.</li>
                                         <li>Developed skeletal animation system using Ozz.</li>
-                                        <li>Render & Post-process pipeline, Deferred rendering, Lighting, Real time shadow mapping, CRT monitor shader...</li>
-                                        <li>Implemented the Engine's built-in editor, providing functionality while offering a user oriented experience.</li>  
+                                        <li>Render & Post-process pipeline, Deferred rendering, Lighting, Real-time shadow mapping, CRT monitor shader...</li>
+                                        <li>Implemented the Engine's built-in editor, providing functionality while offering a user-oriented experience.</li>
                                     </ul>
-                                    <p>C++  ·  C#  ·  SDL  ·  openGL  ·  GLSL  ·  ImGui</p>
+                                    <p>C++  ·  C#  ·  SDL  ·  OpenGL  ·  GLSL  ·  ImGui</p>
                                     <div>
                                         <a href="https://shadow-wizard-games.github.io/Alien-Nemesis-Website/index.html" target="_blank">Website</a>
                                         <a href="https://shadow-wizard-games.github.io/Alien-Nemesis-Website/HéctorBáscones.html" target="_blank">My Contribution</a>
@@ -306,9 +305,9 @@
                                         <li>Camera view & controls, Frustum Culling, Mouse Picking</li>
                                         <li>Model & Texture Loading</li>
                                         <li>Entity-Component System</li>
-                                        <li>Serialization</li>  
+                                        <li>Serialization</li>
                                     </ul>
-                                    <p>C++  ·  SDL  ·  openGL  ·  GLSL  ·  ImGui</p>
+                                    <p>C++  ·  SDL  ·  OpenGL  ·  GLSL  ·  ImGui</p>
                                     <a href="https://shadow-wizard-games.github.io/Alien-Nemesis-Website/engine.html" target="_blank">Features</a>
                                 </div>
                                 <div class="content-video">
@@ -321,7 +320,14 @@
                             <!-- Add more content items as needed -->
                         </div>
                     </div>
-                    <button class="slider-arrow right-arrow" onclick="moveSlide(1)">&#10095;</button>
+                
+                    <div class="navigation">
+                        <button class="slider-arrow left-arrow" onclick="moveSlide(-1)">&#10094;</button>
+                        <div class="dots">
+                            <!-- Dots will be dynamically added here -->
+                        </div>
+                        <button class="slider-arrow right-arrow" onclick="moveSlide(1)">&#10095;</button>
+                    </div>
                 </div>
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                     <h2>My Latest Work</h2>

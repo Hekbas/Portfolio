@@ -97,32 +97,64 @@
         const contentWrapper = document.querySelector('.content-wrapper');
         const items = document.querySelectorAll('.content-item');
         const totalItems = items.length;
+        const dotsContainer = document.querySelector('.dots');
         let currentIndex = 0;
+    
+        // Create dots based on the number of items
+        function createDots() {
+            for (let i = 0; i < totalItems; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                dot.addEventListener('click', function() {
+                    currentIndex = i;
+                    updateContentPosition();
+                    updateDots();
+                });
+                dotsContainer.appendChild(dot);
+            }
+        }
+    
+        // Update the active dot
+        function updateDots() {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
     
         // Function to update the position of the content wrapper
         function updateContentPosition() {
             const offset = -currentIndex * 100; // Move the wrapper based on current index
             contentWrapper.style.transform = `translateX(${offset}%)`;
+            updateDots();
         }
     
         // Event listener for left arrow
         document.querySelector('.left-arrow').addEventListener('click', function() {
-            currentIndex--; // Move to the previous index
-            if (currentIndex < 0) {
-                currentIndex = totalItems - 1; // Wrap to last item
-            }
-            updateContentPosition();
+            moveSlide(-1);
         });
     
         // Event listener for right arrow
         document.querySelector('.right-arrow').addEventListener('click', function() {
-            currentIndex++; // Move to the next index
-            if (currentIndex >= totalItems) {
+            moveSlide(1);
+        });
+    
+        // Function to move the slide and wrap around if necessary
+        function moveSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = totalItems - 1; // Wrap to last item
+            } else if (currentIndex >= totalItems) {
                 currentIndex = 0; // Wrap to first item
             }
             updateContentPosition();
-        });
+        }
+    
+        // Initialize the slider
+        createDots();
+        updateDots();
     });
+    
 
     // Portfolio filter
     var portfolioIsotope = $('.portfolio-container').isotope({
