@@ -93,30 +93,36 @@
     
     
     //Portfolio featured
-    let currentSlide = 0;
-
-    function moveSlide(direction) {
+    document.addEventListener('DOMContentLoaded', function() {
         const contentWrapper = document.querySelector('.content-wrapper');
-        const contentItems = document.querySelectorAll('.content-item');
-        const totalSlides = contentItems.length;
-
-        // Update the current slide index
-        currentSlide += direction;
-
-        // Loop around if the user goes past the first or last item
-        if (currentSlide < 0) {
-            currentSlide = totalSlides - 1;
-        } else if (currentSlide >= totalSlides) {
-            currentSlide = 0;
+        const items = document.querySelectorAll('.content-item');
+        const totalItems = items.length;
+        let currentIndex = 0;
+    
+        // Function to update the position of the content wrapper
+        function updateContentPosition() {
+            const offset = -currentIndex * 100; // Move the wrapper based on current index
+            contentWrapper.style.transform = `translateX(${offset}%)`;
         }
-
-        // Calculate the translation value for the new slide
-        const translateX = -currentSlide * 100;
-
-        // Move the wrapper to the new slide
-        contentWrapper.style.transform = `translateX(${translateX}%)`;
-    }
-
+    
+        // Event listener for left arrow
+        document.querySelector('.left-arrow').addEventListener('click', function() {
+            currentIndex--; // Move to the previous index
+            if (currentIndex < 0) {
+                currentIndex = totalItems - 1; // Wrap to last item
+            }
+            updateContentPosition();
+        });
+    
+        // Event listener for right arrow
+        document.querySelector('.right-arrow').addEventListener('click', function() {
+            currentIndex++; // Move to the next index
+            if (currentIndex >= totalItems) {
+                currentIndex = 0; // Wrap to first item
+            }
+            updateContentPosition();
+        });
+    });
 
     // Portfolio filter
     var portfolioIsotope = $('.portfolio-container').isotope({
