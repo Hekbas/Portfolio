@@ -68,6 +68,20 @@
             loop: true
         });
     }
+
+
+    //Hello there!
+    document.addEventListener('DOMContentLoaded', function() {
+        const hoverText = document.getElementById('hover-text');
+    
+        hoverText.addEventListener('mouseenter', function() {
+            hoverText.textContent = 'General Kenobi!';
+        });
+    
+        hoverText.addEventListener('mouseleave', function() {
+            hoverText.textContent = 'Hello there!';
+        });
+    });
     
     
     // Skills

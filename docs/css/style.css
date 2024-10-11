@@ -18,9 +18,10 @@
 /********* General CSS *********/
 /*******************************/
 body {
-    color: #797979;
+    color: var(--github-base3_2);
     background: var(--github-base0);
     font-family: 'ClashGrotesk', sans-serif;
+    letter-spacing: 2px;
 }
 
 body::before {
@@ -543,7 +544,7 @@ a:focus {
 }
 
 .about .about-text p {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .about .skills {
@@ -587,6 +588,37 @@ a:focus {
         padding: 45px 15px 0 15px;
     }
 }
+
+#hover-text {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+#hover-text::after {
+    content: "General Kenobi!";
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: var(--purple3);
+}
+
+#hover-text:hover::after {
+    opacity: 1;
+}
+
+#hover-text:hover {
+    color: transparent;
+    transition: color 0.3s;
+}
+
+#hover-text::after {
+    transition: opacity 0.3s ease-in-out;
+}
+
 
 
 /*******************************/

@@ -5,11 +5,10 @@
         <meta charset="utf-8">
         <title>Portfolio - Hekbas</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
+        <script src="https://kit.fontawesome.com/3e4a4d1214.js" crossorigin="anonymous"></script>
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -41,7 +40,7 @@
                     <div class="navbar-nav ml-auto">
                         <a href="#home" class="nav-item nav-link active">Home</a>
                         <a href="#about" class="nav-item nav-link">About</a>
-                        <a href="#service" class="nav-item nav-link">Experience</a>
+                         <!--<a href="#service" class="nav-item nav-link">Experience</a>-->
                         <!--<a href="#experience" class="nav-item nav-link">Experience</a>-->
                         <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
                         <!--<a href="#blog" class="nav-item nav-link">Blog</a>-->
@@ -62,7 +61,7 @@
                             <div class="hero-text">
                                 <h1>Héctor Báscones</h1>
                                 <h2></h2>
-                                <div class="typed-text">Software Developer, C++ Programmer, Rendering Enthusiast, Game Developer</div>
+                                <div class="typed-text">Software Developer, C++ Programmer, Graphics Programmer, Game Developer</div>
                             </div>
                             <div class="hero-btn">
                                 <a class="btn" href="download/HectorBasconesCV.pdf" download="HectorBasconesCV.pdf">Download CV</a>
@@ -91,9 +90,11 @@
                     <div class="col-lg-6">
                         <div class="about-content text-center">
                             <div class="about-text">
-                                <p>Hello there! I'm Héctor, software developer and game programmer.</p>
-                                <p>I enjoy learning about graphics, rendering, and shaders, so I'm currently playing around with a custom Engine.</p>
-                                <p>Experience working in teams using Agile and version control tools, really motivated to learn from gamers out there!</p>
+                                <p id="greeting">
+                                    <span id="hover-text">Hello there!</span> I'm Héctor, a huge computer graphics and game programming enthusiast.
+                                </p>
+                                <p>Nowadays you'll frequently find me tinkering with a small custom engine, learning new things about real time rendering and post processing techniques.</p>
+                                <p>I enjoy working in teams that share similar passions, feel free to get in touch if I can be of any help.</p>
                             </div>
                         </div>
                     </div>
@@ -104,7 +105,7 @@
         
         
         <!-- Service Start -->
-        <div class="service" id="service">
+        <div class="service">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s"><div class="section-header">
                     <h2>4 Years Experience</h2>
@@ -113,7 +114,7 @@
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
                         <div class="service-item">
                             <div class="service-icon">
-                                <i class="fa fa-comments"></i>
+                                <i class="fa-solid fa-layer-group"></i>
                             </div>
                             <div class="service-text">
                                 <h3>Systems Programming</h3>
@@ -126,7 +127,7 @@
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="service-item">
                             <div class="service-icon">
-                                <i class="fa fa-laptop"></i>
+                                <i class="fa-solid fa-gears"></i>
                             </div>
                             <div class="service-text">
                                 <h3>Engine Architecture</h3>
@@ -139,7 +140,7 @@
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="service-item">
                             <div class="service-icon">
-                                <i class="fab fa-android"></i>
+                                <i class="fa-solid fa-microchip"></i>
                             </div>
                             <div class="service-text">
                                 <h3>Real Time Rendering</h3>
@@ -152,7 +153,7 @@
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="service-item">
                             <div class="service-icon">
-                                <i class="fa fa-user"></i>
+                                <i class="fa-solid fa-cube"></i>
                             </div>
                             <div class="service-text">
                                 <h3>3D Modeling & Animation</h3>
@@ -307,7 +308,7 @@
                                         <li>Entity-Component System</li>
                                         <li>Serialization</li>
                                     </ul>
-                                    <p>C++  ·  SDL  ·  OpenGL  ·  GLSL  ·  ImGui</p>
+                                    <p>C++  ·  SDL  ·  OpenGL  ·  ImGui</p>
                                     <a href="https://shadow-wizard-games.github.io/Alien-Nemesis-Website/engine.html" target="_blank">Features</a>
                                 </div>
                                 <div class="content-video">
@@ -330,7 +331,7 @@
                     </div>
                 </div>
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <h2>My Latest Work</h2>
+                    <h2>Other Projects</h2>
                 </div>
                 <div class="row">
                     <div class="col-12">
