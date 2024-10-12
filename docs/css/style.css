@@ -545,7 +545,7 @@ a:focus {
 }
 
 .about .about-text p {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .about .skills {
@@ -885,9 +885,9 @@ a:focus {
 /*--------- Featured ----------*/
 .content-slider {
     position: relative;
-    width: 130%;
+    width: 120%;
     max-width: 1720px;
-    margin-left: -15%;
+    margin-left: -10%;
     overflow: hidden;
 }
 
@@ -898,7 +898,7 @@ a:focus {
 }
 
 .content-items {
-    display: flex; 
+    display: flex;
     width: 100%;
 }
 
@@ -906,11 +906,11 @@ a:focus {
     display: flex; 
     min-width: 100%;
     box-sizing: border-box;
+    gap: calc(5%);
 }
 
 .content-text {
-    width: 30%;
-    padding: 20px;
+    width: 35%;
     background: transparent;
     color: var(--github-base4_2);
     display: flex;
@@ -976,7 +976,7 @@ a:focus {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-top: 2px;
+    margin-top: 12px;
     margin-bottom: 80px;
 }
 
