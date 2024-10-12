@@ -46,7 +46,7 @@ h6 {
 }
 
 a {
-    color: #313131;
+    color: #59819c;
     transition: .3s;
 }
 
@@ -462,6 +462,7 @@ a:focus {
 .section-header p {
     display: inline-block;
     margin: 0 30px;
+    margin-top: 70px;
     margin-bottom: 10px;
     padding-left: 15px;
     position: relative;
@@ -884,13 +885,15 @@ a:focus {
 /*--------- Featured ----------*/
 .content-slider {
     position: relative;
-    width: 100%;
+    width: 130%;
+    max-width: 1720px;
+    margin-left: -15%;
     overflow: hidden;
 }
 
 .content-wrapper {
-    display: flex; 
-    transition: transform 0.4s ease-in-out; 
+    display: flex;
+    transition: transform 0.4s ease-in-out;
     width: 100%;
 }
 
@@ -906,32 +909,41 @@ a:focus {
 }
 
 .content-text {
-    width: 35%;
+    width: 30%;
     padding: 20px;
     background: transparent;
-    color: white;
+    color: var(--github-base4_2);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .content-text h2 {
-    margin-top: 0;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
-    /*color: var(--purple3);*/
+    color: var(--purple3);
 }
 
 .content-text p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5;
 }
 
+.content-text ul {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.link-container {
+    display: flex;
+    gap: 15px;
+}
+
 .content-video {
-    width: 65%;
+    width: 60%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     background: transparent;
 }
 
@@ -990,7 +1002,7 @@ a:focus {
 
 
 
-/*---------My Latest Work------*/
+/*--------- Other Projects ------*/
 .portfolio {
     position: relative;
     padding: 45px 0 15px 0;
@@ -1037,6 +1049,7 @@ a:focus {
 
 .portfolio .portfolio-item {
     position: relative;
+    transition: .5s;
 }
 
 .portfolio .portfolio-wrap {
@@ -1051,55 +1064,64 @@ a:focus {
 
 .portfolio .portfolio-img img {
     position: relative;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transform: scale(1.1);
     transition: .5s;
 }
 
-.portfolio .portfolio-item:hover img {
-    margin-left: 15px;
+.portfolio .portfolio-item:hover {
+    transform: scale(1.05);
+    filter: brightness(1.15) contrast(1.1);
 }
 
 .portfolio .portfolio-text {
     position: relative;
     height: 60px;
-    width: calc(100% - 30px);
-    margin: -30px 15px 30px 15px;
+    width: 100%;
+    margin: -60px 0px 30px 0px;
     display: flex;
     align-items: center;
-    background: var(--purple3-40);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 40%, transparent);
+    backdrop-filter: blur(1px);
     box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+}
+
+.portfolio h2 {
+    margin-top: 30px;
 }
 
 .portfolio .portfolio-text h3 {
     width: calc(100% - 70px);
     color: var(--github-base4_2);
     font-size: 18px;
-    font-weight: 600;
-    margin: 0 0 0 15px;
+    font-weight: 800;
+    margin: 20px 0 0 20px;
     white-space: nowrap;
     overflow: hidden;
 }
 
-.portfolio .portfolio-text a.btn {
-    width: 50px;
-    height: 50px;
+.portfolio a.btn {
+    position: relative; /* Use absolute positioning */
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
+    width: 40px;
+    height: 40px;
     padding: 0 0 2px 1px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 45px;
+    font-size: 40px;
     color: var(--purple3);
     font-weight: 100;
+    border-color: transparent;
 }
 
-.portfolio .portfolio-item:hover a.btn {
+.portfolio a.btn:hover {
     color: var(--purple3);
     background: transparent;
     box-shadow: inset 0 0 0 0 var(--purple3);
-    border-color: var(--purple3);
+    border-color: transparent;
 }
 
 
