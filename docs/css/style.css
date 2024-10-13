@@ -375,6 +375,7 @@ a:focus {
     background: transparent;
     box-shadow: inset 0 0 0 0 var(--purple3);
     border-color: var(--purple3-focus);
+    transform:translateY(-3px);
 }
 
 .hero .hero-btn .btn:first-child {
@@ -389,6 +390,12 @@ a:focus {
     margin-top: 35px;
     width: 40px;
     height: 40px;
+    transition: 0.5s;
+}
+
+.hero .icon-btn:hover {
+    color: var(--purple3-focus);
+    transform:translateY(-3px);
 }
 
 .hero .icon-btn i {
