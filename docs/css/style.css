@@ -14,6 +14,11 @@
     font-style: normal;
 }
 
+::selection {
+    background: var(--purple3-40);
+    color: #ffffff;
+}
+
 /*******************************/
 /********* General CSS *********/
 /*******************************/
@@ -351,6 +356,12 @@ a:focus {
     color: #ffffff;
 }
 
+.hero .hero-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .hero .hero-btn .btn {
     margin-top: 35px;
     color: var(--purple3);
@@ -369,6 +380,22 @@ a:focus {
 .hero .hero-btn .btn:first-child {
     margin-right: 10px;
 }
+
+.hero .icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--purple3);
+    margin-top: 35px;
+    width: 40px;
+    height: 40px;
+}
+
+.hero .icon-btn i {
+    font-size: 1.4rem;
+    margin-left: 30px;
+}
+
 
 @media (max-width: 991.98px) {
     .hero {
@@ -1738,7 +1765,7 @@ a:focus {
 .footer .footer-social a i {
     margin-right: 15px;
     font-size: 20px;
-    color: #ffffff;
+    color: var(--purple3);
     transition: .3s;
 }
 
@@ -1747,7 +1774,7 @@ a:focus {
 }
 
 .footer .footer-social a:hover i {
-    color: #414141;
+    color: var(--purple3-focus);
 }
 
 .footer .copyright {
